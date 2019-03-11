@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker-build": "docker build -t buttons-example .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "docker run -p 9000:80 -v /home/marty/tech/projects/bri-bri-buttons/:/var/www/html/ --name  buttons-dev --rm  buttons-example"
   },
   "repository": {
     "type": "git",
