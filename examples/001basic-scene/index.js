@@ -6,7 +6,12 @@ class BasicButton extends HTMLElement {
 
   connectedCallback() {
     this.attrText = this.attributes.txt.value;
-    this.txt = `<button>${this.attrText}</button>`;
+    this.txt = `
+    <style>
+    @import "custom.css";
+    </style>
+      <button>${this.attrText}</button>
+      `;
     this.innerHTML = this.txt;
   }
 
